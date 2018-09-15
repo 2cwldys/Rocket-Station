@@ -390,6 +390,9 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 	if(!tooltips)
 		tooltips = new /datum/tooltip(src)
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 	var/list/topmenus = GLOB.menulist[/datum/verbs/menu]
 	for (var/thing in topmenus)
 		var/datum/verbs/menu/topmenu = thing
@@ -415,6 +418,12 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 
 	Master.UpdateTickRate()
 
+=======
+>>>>>>> parent of d0347280c... adds vore back (why this was removed, I have no idea)
+=======
+>>>>>>> parent of d0347280c... adds vore back (why this was removed, I have no idea)
+=======
+>>>>>>> parent of 412b8da82... Merge pull request #361 from LetterJay/master
 //////////////
 //DISCONNECT//
 //////////////

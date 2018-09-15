@@ -9,10 +9,7 @@
 				playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 
 		if("grab")
-			if(grab_state >= GRAB_AGGRESSIVE && isliving(pulling))
-				vore_attack(M, pulling)
-			else
-				grabbedby(M)
+			grabbedby(M)
 
 		if("harm", "disarm")
 			if(M.has_trait(TRAIT_PACIFISM))

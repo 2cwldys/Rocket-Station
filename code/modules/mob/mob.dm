@@ -27,6 +27,9 @@
 		GLOB.alive_mob_list += src
 	set_focus(src)
 	prepare_huds()
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 	for(var/v in GLOB.active_alternate_appearances)
 		if(!v)
 			continue
@@ -38,6 +41,14 @@
 
 /mob/GenerateTag()
 	tag = "mob_[next_mob_id++]"
+=======
+=======
+>>>>>>> parent of d0347280c... adds vore back (why this was removed, I have no idea)
+=======
+>>>>>>> parent of 412b8da82... Merge pull request #361 from LetterJay/master
+	can_ride_typecache = typecacheof(can_ride_typecache)
+	..()
+>>>>>>> parent of d0347280c... adds vore back (why this was removed, I have no idea)
 
 /atom/proc/prepare_huds()
 	hud_list = list()
@@ -124,8 +135,19 @@
 		if(M == src) //the src always see the main message or self message
 			if(self_message)
 				msg = self_message
+<<<<<<< HEAD
 		else //CITADEL EDIT, required for vore code to remove (T != loc && T != src)) as a check
 			if(M.see_invisible<invisibility) //if src is invisible to us,
+=======
+		else
+			if(M.see_invisible<invisibility || (T != loc && T != src))//if src is invisible to us or is inside something (and isn't a turf),
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of d0347280c... adds vore back (why this was removed, I have no idea)
+=======
+>>>>>>> parent of d0347280c... adds vore back (why this was removed, I have no idea)
+=======
+>>>>>>> parent of 412b8da82... Merge pull request #361 from LetterJay/master
 				if(blind_message) // then people see blind message if there is one, otherwise nothing.
 					msg = blind_message
 				else
