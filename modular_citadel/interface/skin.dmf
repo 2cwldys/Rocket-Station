@@ -116,7 +116,7 @@ window "mapwindow"
 window "infowindow"
 	elem "infowindow"
 		type = MAIN
-		pos = 0,0
+		pos = 281,0
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
@@ -176,7 +176,7 @@ window "infowindow"
 		text-color = #ffffff
 		background-color = #40628a
 		saved-params = "is-checked"
-		text = "Forum"
+		text = "Discord"
 		command = "forum"
 	elem "github"
 		type = BUTTON

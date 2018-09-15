@@ -16,15 +16,15 @@
 
 /client/verb/forum()
 	set name = "forum"
-	set desc = "Visit the forum."
+	set desc = "Visit the Discord."
 	set hidden = 1
 	var/forumurl = CONFIG_GET(string/forumurl)
 	if(forumurl)
-		if(alert("This will open the forum in your browser. Are you sure?",,"Yes","No")!="Yes")
+		if(alert("This will open the Discord in your browser. Are you sure?",,"Yes","No")!="Yes")
 			return
 		src << link(forumurl)
 	else
-		to_chat(src, "<span class='danger'>The forum URL is not set in the server configuration.</span>")
+		to_chat(src, "<span class='danger'>The discord URL is not set in the server configuration.</span>")
 	return
 
 /client/verb/rules()
