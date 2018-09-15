@@ -602,21 +602,9 @@
 	if(buckled && last_special <= world.time)
 		resist_buckle()
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 	// CIT CHANGE - climbing out of a gut
 	if(attempt_vr(src,"vore_process_resist",args)) return TRUE
 
-=======
->>>>>>> parent of d0347280c... adds vore back (why this was removed, I have no idea)
-=======
->>>>>>> parent of d0347280c... adds vore back (why this was removed, I have no idea)
-=======
->>>>>>> parent of 412b8da82... Merge pull request #361 from LetterJay/master
-=======
->>>>>>> parent of d0347280c... adds vore back (why this was removed, I have no idea)
 	//Breaking out of a container (Locker, sleeper, cryo...)
 	else if(isobj(loc))
 		var/obj/C = loc
