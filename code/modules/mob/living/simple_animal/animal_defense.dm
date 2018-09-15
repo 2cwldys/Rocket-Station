@@ -8,12 +8,6 @@
 				visible_message("<span class='notice'>[M] [response_help] [src].</span>")
 				playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 
-		if("grab")
-			if(grab_state >= GRAB_AGGRESSIVE && isliving(pulling))
-				vore_attack(M, pulling)
-			else
-				grabbedby(M)
-
 		if("harm", "disarm")
 			if(M.has_trait(TRAIT_PACIFISM))
 				to_chat(M, "<span class='notice'>You don't want to hurt [src]!</span>")

@@ -602,9 +602,6 @@
 	if(buckled && last_special <= world.time)
 		resist_buckle()
 
-	// CIT CHANGE - climbing out of a gut
-	if(attempt_vr(src,"vore_process_resist",args)) return TRUE
-
 	//Breaking out of a container (Locker, sleeper, cryo...)
 	else if(isobj(loc))
 		var/obj/C = loc

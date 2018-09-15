@@ -411,8 +411,6 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 		if (menuitem)
 			menuitem.Load_checked(src)
 
-	hook_vr("client_new",list(src)) // CIT CHANGE - hook for client/New() changes
-
 	Master.UpdateTickRate()
 
 //////////////

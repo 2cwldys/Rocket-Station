@@ -83,9 +83,6 @@
 		if(L.stat != DEAD)
 			if(!client && ranged && ranged_cooldown <= world.time)
 				OpenFire()
-		else if(L.stat >= SOFT_CRIT)
-			if(vore_active == TRUE && L.devourable == TRUE)
-				dragon_feeding(src,L)
 			else if(L.stat == DEAD)
 				devour(L)
 
