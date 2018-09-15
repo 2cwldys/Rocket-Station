@@ -61,12 +61,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	handle_gravity()
 =======
 =======
 >>>>>>> parent of d0347280c... adds vore back (why this was removed, I have no idea)
 =======
 >>>>>>> parent of 412b8da82... Merge pull request #361 from LetterJay/master
+=======
+>>>>>>> parent of d0347280c... adds vore back (why this was removed, I have no idea)
 	update_gravity(mob_has_gravity())
 >>>>>>> parent of d0347280c... adds vore back (why this was removed, I have no idea)
 

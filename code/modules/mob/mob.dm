@@ -30,6 +30,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	for(var/v in GLOB.active_alternate_appearances)
 		if(!v)
 			continue
@@ -46,6 +47,8 @@
 >>>>>>> parent of d0347280c... adds vore back (why this was removed, I have no idea)
 =======
 >>>>>>> parent of 412b8da82... Merge pull request #361 from LetterJay/master
+=======
+>>>>>>> parent of d0347280c... adds vore back (why this was removed, I have no idea)
 	can_ride_typecache = typecacheof(can_ride_typecache)
 	..()
 >>>>>>> parent of d0347280c... adds vore back (why this was removed, I have no idea)
@@ -143,11 +146,14 @@
 			if(M.see_invisible<invisibility || (T != loc && T != src))//if src is invisible to us or is inside something (and isn't a turf),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of d0347280c... adds vore back (why this was removed, I have no idea)
 =======
 >>>>>>> parent of d0347280c... adds vore back (why this was removed, I have no idea)
 =======
 >>>>>>> parent of 412b8da82... Merge pull request #361 from LetterJay/master
+=======
+>>>>>>> parent of d0347280c... adds vore back (why this was removed, I have no idea)
 				if(blind_message) // then people see blind message if there is one, otherwise nothing.
 					msg = blind_message
 				else
