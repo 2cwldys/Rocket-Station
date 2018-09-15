@@ -16,12 +16,6 @@
 	var/widescreenpref = TRUE
 	var/autostand = TRUE
 
-	//vore prefs
-	var/toggleeatingnoise = TRUE
-	var/toggledigestionnoise = TRUE
-	var/hound_sleeper = TRUE
-	var/cit_toggles = TOGGLES_CITADEL
-
 	// stuff that was in base
 	max_save_slots = 10
 	features = list("mcolor" = "FFF",
