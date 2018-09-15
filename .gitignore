@@ -202,3 +202,29 @@ tools/MapAtmosFixer/MapAtmosFixer/bin/*
 
 #Jukebox audio files
 /config/jukebox_music/**/*
+/config/config.txt
+/config/custom_roundstart_items.txt
+/config/dbconfig.txt
+/config/external_rsc_urls.txt
+/config/game_options.txt
+/config/jobs.txt
+/config/lavaRuinBlacklist.txt
+/config/loadout_config.txt
+/config/maps.txt
+/config/mentors.txt
+/config/motd.txt
+/config/policies.txt
+/config/server_to_tool_bridge_port.txt
+/config/silicon_laws.txt
+/config/spaceRuinBlacklist.txt
+/config/unbuyableshuttles.txt
+/config/whitelist.txt
+/config/jukebox_music
+/config/title_music
+/config/title_screens
+/config/admin_nicknames.txt
+/config/admin_ranks.txt
+/config/admins.txt
+/config/antag_rep.txt
+/config/awaymissionconfig.txt
+/config/comms.txt
