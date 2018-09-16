@@ -160,3 +160,17 @@
 		user.nextsoundemote = world.time + 7
 		playsound(user, 'modular_citadel/sound/voice/weh.ogg', 50, 1, -1)
 	. = ..()
+
+/datum/emote/living/catlaugh
+	key = "catlaugh"
+	key_third_person = "laughs"
+	message = "laughs!"
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/catlaugh/run_emote(mob/living/user, params)
+	if(ishuman(user))
+		if(user.nextsoundemote >= world.time)
+			return
+		user.nextsoundemote = world.time + 7
+		playsound(user, 'modular_citadel/sound/voice/nyahehe.ogg', 50, 1, -1)
+	. = ..()
