@@ -84,3 +84,28 @@
 	else
 		to_chat(user, "<span class='notice'>..and falls into view. Whew, that was a close one.</span>")
 		user.dropItemToGround(src)
+
+
+
+
+
+
+/obj/item/gun/ballistic/automatic/pistol/longmag
+	name = "gunman's pistol"
+	desc = "A small, easily concealable 10mm handgun. Has a threaded barrel for suppressors."
+	icon_state = "pistol"
+	w_class = WEIGHT_CLASS_SMALL
+	mag_type = /obj/item/ammo_box/magazine/longmag
+	can_suppress = TRUE
+	burst_size = 1
+	fire_delay = 0
+	actions_types = list()
+
+/obj/item/gun/ballistic/automatic/pistol/update_icon()
+	..()
+	icon_state = "[initial(icon_state)][chambered ? "" : "-e"][suppressed ? "-suppressed" : ""]"
+
+/obj/item/gun/ballistic/automatic/pistol/suppressed/Initialize(mapload)
+	. = ..()
+	var/obj/item/suppressor/S = new(src)
+	install_suppressor(S)
