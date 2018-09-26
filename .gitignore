@@ -2,6 +2,7 @@
 
 #Ignore everything in datafolder and subdirectories
 /data/**/*
+/tmp/**/*
 
 #Ignore byond config folder.
 /cfg/**/*
@@ -202,6 +203,7 @@ tools/MapAtmosFixer/MapAtmosFixer/bin/*
 
 #Jukebox audio files
 /config/jukebox_music/**/*
+<<<<<<< HEAD
 /config/config.txt
 /config/custom_roundstart_items.txt
 /config/dbconfig.txt
@@ -228,3 +230,9 @@ tools/MapAtmosFixer/MapAtmosFixer/bin/*
 /config/antag_rep.txt
 /config/awaymissionconfig.txt
 /config/comms.txt
+=======
+
+#extra map stuff
+/_maps/**/backup/
+/_maps/templates.dm
+>>>>>>> 7eca7d2f3a4cfb661e625a5e0a804b2ffffba400

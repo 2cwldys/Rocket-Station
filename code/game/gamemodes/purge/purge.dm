@@ -4,7 +4,7 @@
 	name = "purge"
 	config_tag = "purge"
 	false_report_weight = 5
-	required_players = 10
+	required_players = 2
 
 	announce_span = "purge notice"
 	announce_text = "Since this is a purge round rules will be pretty low. Additionally, do not expect admins to answer ahelps as they are not obliged to. Have fun and enjoy the round! -Wicker0"

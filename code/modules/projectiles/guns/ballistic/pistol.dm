@@ -9,6 +9,9 @@
 	fire_delay = 0
 	actions_types = list()
 
+/obj/item/gun/ballistic/automatic/pistol/no_mag
+	spawnwithmagazine = FALSE
+
 /obj/item/gun/ballistic/automatic/pistol/update_icon()
 	..()
 	icon_state = "[initial(icon_state)][chambered ? "" : "-e"][suppressed ? "-suppressed" : ""]"
@@ -25,6 +28,9 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/m45
 	can_suppress = FALSE
+
+/obj/item/gun/ballistic/automatic/pistol/m1911/no_mag
+	spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/automatic/pistol/m1911/kitchengun
 	name = "\improper Kitchen Gun (TM)"
@@ -85,6 +91,7 @@
 		to_chat(user, "<span class='notice'>..and falls into view. Whew, that was a close one.</span>")
 		user.dropItemToGround(src)
 
+<<<<<<< HEAD
 /obj/item/gun/ballistic/automatic/pistol/update_icon()
 	..()
 	icon_state = "[initial(icon_state)][chambered ? "" : "-e"][suppressed ? "-suppressed" : ""]"
@@ -93,3 +100,5 @@
 	. = ..()
 	var/obj/item/suppressor/S = new(src)
 	install_suppressor(S)
+=======
+>>>>>>> 7eca7d2f3a4cfb661e625a5e0a804b2ffffba400
