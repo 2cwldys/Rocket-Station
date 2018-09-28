@@ -236,3 +236,7 @@ tools/MapAtmosFixer/MapAtmosFixer/bin/*
 /_maps/**/backup/
 /_maps/templates.dm
 >>>>>>> 7eca7d2f3a4cfb661e625a5e0a804b2ffffba400
+/config/game_options.txt
+/config/config.txt
+/config/dbconfig.txt
+/config

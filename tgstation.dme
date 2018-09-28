@@ -101,10 +101,6 @@
 #include "code\__DEFINES\turf_flags.dm"
 #include "code\__DEFINES\typeids.dm"
 #include "code\__DEFINES\vehicles.dm"
-<<<<<<< HEAD
-#include "code\__DEFINES\voreconstants.dm"
-=======
->>>>>>> 549276b772cdde53a54af60534ab429bf14dcb7c
 #include "code\__DEFINES\vv.dm"
 #include "code\__DEFINES\wall_dents.dm"
 #include "code\__DEFINES\wires.dm"
@@ -273,10 +269,6 @@
 #include "code\controllers\subsystem\title.dm"
 #include "code\controllers\subsystem\traumas.dm"
 #include "code\controllers\subsystem\vis_overlays.dm"
-<<<<<<< HEAD
-#include "code\controllers\subsystem\vore.dm"
-=======
->>>>>>> 549276b772cdde53a54af60534ab429bf14dcb7c
 #include "code\controllers\subsystem\vote.dm"
 #include "code\controllers\subsystem\weather.dm"
 #include "code\controllers\subsystem\processing\circuit.dm"
