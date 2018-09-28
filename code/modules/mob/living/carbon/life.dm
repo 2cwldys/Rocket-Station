@@ -64,11 +64,6 @@
 		return
 	if(ismob(loc))
 		return
-<<<<<<< HEAD
-=======
-	if(isbelly(loc))
-		return
->>>>>>> 7eca7d2f3a4cfb661e625a5e0a804b2ffffba400
 
 	var/datum/gas_mixture/environment
 	if(loc)

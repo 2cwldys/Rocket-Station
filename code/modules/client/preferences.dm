@@ -1925,21 +1925,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					parallax = WRAP(parallax - 1, PARALLAX_INSANE, PARALLAX_DISABLE + 1)
 					if (parent && parent.mob && parent.mob.hud_used)
 						parent.mob.hud_used.update_parallax_pref(parent.mob)
-<<<<<<< HEAD
-=======
-
-				// Citadel edit - Prefs don't work outside of this. :c
-				if("hound_sleeper")
-					cit_toggles ^= MEDIHOUND_SLEEPER
-
-				if("toggleeatingnoise")
-					cit_toggles ^= EATING_NOISES
-
-				if("toggledigestionnoise")
-					cit_toggles ^= DIGESTION_NOISES
-				//END CITADEL EDIT
->>>>>>> 7eca7d2f3a4cfb661e625a5e0a804b2ffffba400
-
 				if("ambientocclusion")
 					ambientocclusion = !ambientocclusion
 					if(parent && parent.screen && parent.screen.len)
