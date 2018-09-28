@@ -102,11 +102,7 @@
 		for(var/obj/item/organ/genital/dicc in internal_organs)
 			if(istype(dicc) && dicc.is_exposed())
 				msg += "[dicc.desc]\n"
-<<<<<<< HEAD
-=======
 
-	msg += attempt_vr(src,"examine_bellies",args) //vore Code
->>>>>>> 7eca7d2f3a4cfb661e625a5e0a804b2ffffba400
 //END OF CIT CHANGES
 
 	//Jitters

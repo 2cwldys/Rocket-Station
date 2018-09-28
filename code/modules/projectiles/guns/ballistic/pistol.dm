@@ -91,7 +91,6 @@
 		to_chat(user, "<span class='notice'>..and falls into view. Whew, that was a close one.</span>")
 		user.dropItemToGround(src)
 
-<<<<<<< HEAD
 /obj/item/gun/ballistic/automatic/pistol/update_icon()
 	..()
 	icon_state = "[initial(icon_state)][chambered ? "" : "-e"][suppressed ? "-suppressed" : ""]"
@@ -100,5 +99,3 @@
 	. = ..()
 	var/obj/item/suppressor/S = new(src)
 	install_suppressor(S)
-=======
->>>>>>> 7eca7d2f3a4cfb661e625a5e0a804b2ffffba400

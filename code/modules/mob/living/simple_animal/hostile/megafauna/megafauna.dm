@@ -83,21 +83,7 @@
 		if(L.stat != DEAD)
 			if(!client && ranged && ranged_cooldown <= world.time)
 				OpenFire()
-<<<<<<< HEAD
 			else if(L.stat == DEAD)
-=======
-
-		else if(L.stat >= SOFT_CRIT)
-			if(vore_active == TRUE && L.devourable == TRUE)
-				if(isliving(target) && !target.Adjacent(targets_from))
-					return
-				else
-					dragon_feeding(src,L)
-					if(L.loc == src.contents)
-						LoseTarget()
-						return 0
-			else
->>>>>>> 7eca7d2f3a4cfb661e625a5e0a804b2ffffba400
 				devour(L)
 
 /mob/living/simple_animal/hostile/megafauna/proc/devour(mob/living/L)
