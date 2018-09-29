@@ -77,5 +77,3 @@
 		if(chosen_gear.len)
 			var/text_to_save = chosen_gear.Join("|")
 			S["loadout"] << text_to_save
-		else
-			S["loadout"] << "" //empty string to reset the value
