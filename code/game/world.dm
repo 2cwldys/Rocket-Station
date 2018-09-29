@@ -259,11 +259,11 @@ GLOBAL_VAR(restart_counter)
 
 	s += "<b>[station_name()]</b>";
 	s += " ("
-	s += "<a href=\"https://citadel-station.net/home/\">" //Change this to wherever you want the hub to link to. CIT CHANGE - links to cit's website on the hub
-	s += "Citadel"  //Replace this with something else. Or ever better, delete it and uncomment the game version. CIT CHANGE - modifies the hub entry link
+	s += "<a href=\"https://discord.gg/Aq6w6At/\">" //Change this to wherever you want the hub to link to. CIT CHANGE - links to cit's website on the hub
+	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version. CIT CHANGE - modifies the hub entry link
 	s += "</a>"
 	s += ")\]" //CIT CHANGE - encloses the server title in brackets to make the hub entry fancier
-	s += "<br><small><i>That furry /TG/code server your mother warned you about.</i></small><br>" //CIT CHANGE - adds a tagline!
+	s += "<br><small><i>Medium RP Citadel. No vore, no bullshit.</i></small><br>" //CIT CHANGE - adds a tagline!
 
 	var/n = 0
 	for (var/mob/M in GLOB.player_list)
