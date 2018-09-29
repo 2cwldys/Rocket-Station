@@ -254,13 +254,3 @@
 
 //EXOTIC//
 //These races will likely include lots of downsides and upsides. Keep them relatively balanced.//
-<<<<<<< HEAD
-=======
-
-//misc
-/mob/living/carbon/human/dummy
-	no_vore = TRUE
-
-/mob/living/carbon/human/vore
-	devourable = TRUE
->>>>>>> cbbbc616e5959668bdf229dd58daa4339559d903
