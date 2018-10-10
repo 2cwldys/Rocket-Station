@@ -50,7 +50,7 @@ menu "menu"
 window "mainwindow"
 	elem "mainwindow"
 		type = MAIN
-		pos = 281,0
+		pos = 0,0
 		size = 640x440
 		anchor1 = none
 		anchor2 = none
@@ -125,8 +125,8 @@ window "infowindow"
 		is-pane = true
 	elem "info"
 		type = CHILD
-		pos = 0,48
-		size = 640x427
+		pos = 0,30
+		size = 640x445
 		anchor1 = 0,0
 		anchor2 = 100,100
 		background-color = #272727
@@ -137,10 +137,9 @@ window "infowindow"
 	elem "forum"
 		type = BUTTON
 		pos = 0,0
-		size = 320x40
-		anchor1 = 0,0
-		anchor2 = 50,8
-		font-style = "underline"
+		size = 288x32
+		anchor1 = 50,0
+		anchor2 = 66,0
 		text-color = #ffffff
 		background-color = #40628a
 		saved-params = "is-checked"
@@ -148,11 +147,10 @@ window "infowindow"
 		command = "forum"
 	elem "github"
 		type = BUTTON
-		pos = 320,0
-		size = 320x40
+		pos = 352,0
+		size = 288x32
 		anchor1 = 66,0
 		anchor2 = 81,0
-		font-style = "underline"
 		text-color = #ffffff
 		background-color = #40628a
 		saved-params = "is-checked"
