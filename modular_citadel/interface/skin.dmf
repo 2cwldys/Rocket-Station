@@ -50,7 +50,7 @@ menu "menu"
 window "mainwindow"
 	elem "mainwindow"
 		type = MAIN
-		pos = 0,0
+		pos = 281,0
 		size = 640x440
 		anchor1 = none
 		anchor2 = none
@@ -125,8 +125,8 @@ window "infowindow"
 		is-pane = true
 	elem "info"
 		type = CHILD
-		pos = 0,30
-		size = 640x445
+		pos = 0,48
+		size = 640x427
 		anchor1 = 0,0
 		anchor2 = 100,100
 		background-color = #272727
@@ -134,43 +134,10 @@ window "infowindow"
 		left = "statwindow"
 		right = "outputwindow"
 		is-vert = false
-	elem "changelog"
-		type = BUTTON
-		pos = 16,5
-		size = 104x20
-		anchor1 = 3,0
-		anchor2 = 19,0
-		text-color = #ffffff
-		background-color = #40628a
-		saved-params = "is-checked"
-		text = "Changelog"
-		command = "changelog"
-	elem "rules"
-		type = BUTTON
-		pos = 120,5
-		size = 100x20
-		anchor1 = 19,0
-		anchor2 = 34,0
-		text-color = #ffffff
-		background-color = #40628a
-		saved-params = "is-checked"
-		text = "Rules"
-		command = "rules"
-	elem "wiki"
-		type = BUTTON
-		pos = 220,5
-		size = 100x20
-		anchor1 = 34,0
-		anchor2 = 50,0
-		text-color = #ffffff
-		background-color = #40628a
-		saved-params = "is-checked"
-		text = "Wiki"
-		command = "wiki"
 	elem "forum"
 		type = BUTTON
-		pos = 320,5
-		size = 100x20
+		pos = 0,0
+		size = 320x40
 		anchor1 = 50,0
 		anchor2 = 66,0
 		text-color = #ffffff
@@ -180,8 +147,8 @@ window "infowindow"
 		command = "forum"
 	elem "github"
 		type = BUTTON
-		pos = 420,5
-		size = 100x20
+		pos = 320,0
+		size = 320x40
 		anchor1 = 66,0
 		anchor2 = 81,0
 		text-color = #ffffff
@@ -189,18 +156,6 @@ window "infowindow"
 		saved-params = "is-checked"
 		text = "GitHub"
 		command = "github"
-	elem "report-issue"
-		type = BUTTON
-		pos = 520,5
-		size = 100x20
-		anchor1 = 81,0
-		anchor2 = 97,0
-		font-size = 8
-		text-color = #ffffff
-		background-color = #40628a
-		saved-params = "is-checked"
-		text = "Report Issue"
-		command = "report-issue"
 
 window "outputwindow"
 	elem "outputwindow"
