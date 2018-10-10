@@ -138,8 +138,9 @@ window "infowindow"
 		type = BUTTON
 		pos = 0,0
 		size = 320x40
-		anchor1 = 50,0
-		anchor2 = 66,0
+		anchor1 = 0,0
+		anchor2 = 50,8
+		font-style = "underline"
 		text-color = #ffffff
 		background-color = #40628a
 		saved-params = "is-checked"
@@ -151,6 +152,7 @@ window "infowindow"
 		size = 320x40
 		anchor1 = 66,0
 		anchor2 = 81,0
+		font-style = "underline"
 		text-color = #ffffff
 		background-color = #40628a
 		saved-params = "is-checked"
