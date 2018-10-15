@@ -161,16 +161,23 @@
 		playsound(user, 'modular_citadel/sound/voice/weh.ogg', 50, 1, -1)
 	. = ..()
 
-/datum/emote/living/catlaugh
-	key = "catlaugh"
-	key_third_person = "laughs"
-	message = "laughs!"
+/datum/emote/living/dab
+	key = "dab"
+	key_third_person = "suddenly hits a dab"
+	message = "suddenly hits a dab!"
 	emote_type = EMOTE_AUDIBLE
 
-/datum/emote/living/catlaugh/run_emote(mob/living/user, params)
-	if(ishuman(user))
-		if(user.nextsoundemote >= world.time)
-			return
-		user.nextsoundemote = world.time + 7
-		playsound(user, 'modular_citadel/sound/voice/nyahehe.ogg', 50, 1, -1)
+
+
+/datum/emote/living/dab/run_emote(mob/living/user, params)
+	if (ishuman(user))
+		var/def_zone = BODY_ZONE_CHEST
+		var/luck = (rand(1,100))
+		if(luck >= 65)
+			user.adjustStaminaLoss(70)
+		if(luck >= 80)
+			def_zone = pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM)
+			user.apply_damage(20, BRUTE, def_zone)
+		if(luck >= 95)
+			user.adjustBrainLoss(100)
 	. = ..()
