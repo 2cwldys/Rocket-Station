@@ -5,8 +5,8 @@
 
 SUBSYSTEM_DEF(dabber) //this creates a subsystem
 	name = "Height" //this gives it a name
-	wait = 1 //SS_TICKER OVERRIDE
-	flags = SS_BACKGROUND|SS_POST_FIRE_TIMING|SS_NO_INIT|SS_TICKER //these flags indicate what it does.
+	wait = 0.5
+	flags = SS_BACKGROUND|SS_POST_FIRE_TIMING|SS_NO_INIT //these flags indicate what it does.
 	init_order = INIT_ORDER_HEIGHT
 	priority = FIRE_PRIORITY_HEIGHT
 	var/list/processing = list() //what do we process NOOB
@@ -37,6 +37,8 @@ SUBSYSTEM_DEF(dabber) //this creates a subsystem
 /mob/proc/height_Process() //procs are commands which are called from other code, to execute stuff, etc. In this case read line 19 (thing.height_Process()) It's epic right?
 	set waitfor = 0 //don't do sleeps.
 	if(MyShadow)
+		MyShadow.glide_size = glide_size
+		MyShadow.transform = transform
 		MyShadow.loc = loc
 		MyShadow.dir = dir
 		MyShadow.icon = icon
@@ -46,22 +48,24 @@ SUBSYSTEM_DEF(dabber) //this creates a subsystem
 		MyShadow.underlays = underlays
 	else
 		MyShadow = new()
-	ySpeed -= 48/256 //ySpeed is decremented, so the player falls down.
+	ySpeed -= (48/256)*6 //ySpeed is decremented, so the player falls down.
 	heightZ += ySpeed //moves height by y Speed
 	if(heightZ < 0) //If heightz is below 0 (under floor)
 		heightZ = 0 //we dont go under the floor
 		ySpeed = 0
-	pixel_z = round(heightZ)
+	if(pixel_y != round(heightZ))
+		animate(src, pixel_y = round(heightZ), time = 0.5)
 	return PROCESS_KILL //it's over.
 
 /mob/proc/Jump()
 	if(heightZ <= 0) //If height is 0 or below (floor)
-		ySpeed = 1252/256 //Jump!
+		ySpeed = (1252/256)*3 //Jump!
 /obj/effect/shadow
 	mouse_opacity = 0
 	color = "#000000"
 	appearance_flags = KEEP_TOGETHER
-	alpha = 150
+	alpha = 100
+
 /mob/key_down(_key, client/user)
 	switch(_key)
 		if("Space")
