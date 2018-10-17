@@ -89,3 +89,14 @@
 	filling_color = "#F5F5DC"
 	tastes = list("sweetness" = 3, "cake" = 1)
 	foodtype = GRAIN | FRUIT | VEGETABLES
+
+/obj/item/reagent_containers/food/snacks/candy/luigibar
+	name = "Luigi Bar"
+	desc = "You feel your brain cells depleting just looking at it."
+	icon_state = "luigibar"
+	trash = /obj/item/trash/luigibar
+	list_reagents = list("mutagen" = 1, "bad_food" = 3, "sugar" = 3)
+	junkiness = 30
+	filling_color = "#D2691E"
+	tastes = list("catgirls" = 3, "shitcode" = 1, "narcissism" = 5)
+	foodtype = JUNKFOOD | SUGAR

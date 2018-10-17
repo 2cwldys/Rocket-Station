@@ -82,3 +82,7 @@
 	visible_message("[src] fuses into a diamond! Someone wasn't so naughty after all...")
 	new /obj/item/stack/ore/diamond(loc)
 	qdel(src)
+
+/obj/item/trash/luigibar
+	name = "luigi bar wrapper"
+	icon_state = "luigibar"
