@@ -32,8 +32,8 @@ SUBSYSTEM_DEF(dabber) //this creates a subsystem
 		obj/effect/shadow/MyShadow
 	Initialize() //When the player is spawned or initialized.......
 		..() //Add this always
-		SSdabber.processing += src //Dabber is our subsystem. so it would add the player to the processing list.
-
+		if(istype(src,/mob/living/carbon))
+			SSdabber.processing += src //Dabber is our subsystem. so it would add the player to the processing list.
 /mob/proc/height_Process() //procs are commands which are called from other code, to execute stuff, etc. In this case read line 19 (thing.height_Process()) It's epic right?
 	set waitfor = 0 //don't do sleeps.
 	if(MyShadow)
@@ -46,6 +46,7 @@ SUBSYSTEM_DEF(dabber) //this creates a subsystem
 		MyShadow.overlays = overlays
 		MyShadow.vis_contents = vis_contents
 		MyShadow.underlays = underlays
+		MyShadow.alpha = (alpha/255)*100
 	else
 		MyShadow = new()
 	ySpeed -= (48/256)*6 //ySpeed is decremented, so the player falls down.
