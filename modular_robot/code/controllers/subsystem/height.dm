@@ -47,6 +47,9 @@ SUBSYSTEM_DEF(dabber) //this creates a subsystem
 		MyShadow.vis_contents = vis_contents
 		MyShadow.underlays = underlays
 		MyShadow.alpha = (alpha/255)*100
+		MyShadow.pixel_x = pixel_x
+		MyShadow.pixel_w = pixel_w
+		MyShadow.pixel_z = pixel_z
 	else
 		MyShadow = new()
 	ySpeed -= (48/256)*6 //ySpeed is decremented, so the player falls down.
