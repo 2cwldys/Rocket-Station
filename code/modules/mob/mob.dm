@@ -412,7 +412,7 @@
 
 	log_game("[key_name(usr)] used abandon mob.")
 
-	to_chat(usr, "<span class='boldnotice'>Please roleplay correctly!</span>")
+	to_chat(usr, "<span class='boldnotice'>Please roleplay correctly and use a new character.</span>")
 
 	if(!client)
 		log_game("[key_name(usr)] AM failed due to disconnect.")
