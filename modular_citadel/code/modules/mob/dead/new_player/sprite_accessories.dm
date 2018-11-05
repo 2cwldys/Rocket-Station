@@ -34,7 +34,7 @@
 *******************************************/
 /datum/sprite_accessory/tails/human/none
 	name = "None"
-
+	icon_state = "None"
 /datum/sprite_accessory/tails/human/ailurus
 	name = "Red Panda"
 	icon_state = "ailurus"
@@ -416,6 +416,7 @@
 
 /datum/sprite_accessory/mam_ears/none
 	name = "None"
+	icon_state = "None"
 
 /datum/sprite_accessory/mam_tails
 	extra = TRUE
@@ -426,6 +427,7 @@
 
 /datum/sprite_accessory/mam_tails/none
 	name = "None"
+	icon_state = "None"
 
 /datum/sprite_accessory/mam_tails_animated
 	extra = TRUE
@@ -529,6 +531,9 @@
 /******************************************
 ***************** Ears ********************
 *******************************************/
+/datum/sprite_accessory/mam_ears/none
+	name = "None"
+	icon_state = "None"
 
 /datum/sprite_accessory/mam_ears/axolotl
 	name = "Axolotl"
@@ -592,7 +597,7 @@
 
 /datum/sprite_accessory/mam_ears/neko
 	name = "Neko"
-	icon_state = "neko"
+	icon_state = "cat"
 	hasinner = 1
 	color_src = HAIR
 	icon = 'modular_citadel/icons/mob/mam_ears.dmi'
@@ -635,6 +640,9 @@
 /******************************************
 *********** Tails and Things **************
 *******************************************/
+/datum/sprite_accessory/mam_tails/none
+	name = "None"
+	icon_state = "None"
 
 /datum/sprite_accessory/mam_tails/ailurus
 	name = "Ailurus"
