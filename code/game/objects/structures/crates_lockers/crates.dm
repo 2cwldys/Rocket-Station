@@ -97,6 +97,7 @@
 	name = "blood freezer"
 	desc = "A freezer containing packs of blood."
 	icon_state = "surgery"
+
 /obj/structure/closet/crate/freezer/blood/PopulateContents()
 	. = ..()
 	new /obj/item/reagent_containers/blood(src)

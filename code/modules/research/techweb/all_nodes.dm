@@ -49,7 +49,7 @@
 	display_name = "Biological Technology"
 	description = "What makes us tick."	//the MC, silly!
 	prereq_ids = list("base")
-	design_ids = list("chem_heater", "chem_master", "chem_dispenser", "sleeper", "vr_sleeper", "pandemic", "defibmount", "operating", "soda_dispenser", "beer_dispenser", "healthanalyzer")
+	design_ids = list("chem_heater", "chem_master", "chem_dispenser", "sleeper", "vr_sleeper", "pandemic", "defibmount", "operating", "soda_dispenser", "beer_dispenser", "healthanalyzer", "blood_bag")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
@@ -68,6 +68,24 @@
 	description = "From slimes to kitchens."
 	prereq_ids = list("biotech")
 	design_ids = list("smartfridge", "gibber", "deepfryer", "monkey_recycler", "processor", "gibber", "microwave", "reagentgrinder", "dish_drive")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	export_price = 5000
+
+/datum/techweb_node/surplus_lims
+	id = "surplus_lims"
+	display_name = "Basic Prosthetics"
+	description = "Basic fragile lims for the impaired."
+	prereq_ids = list("biotech")
+	design_ids = list("basic_l_arm", "basic_r_arm", "basic_r_leg", "basic_l_leg")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 1000) // You can knock them off with a glass shard...
+	export_price = 5000
+
+/datum/techweb_node/advance_lims
+	id = "advance_lims"
+	display_name = "Upgraded Prosthetics"
+	description = "Reinforced prosthetics for the impaired."
+	prereq_ids = list("adv_biotech", "surplus_lims")
+	design_ids = list("adv_l_arm", "adv_r_arm", "adv_r_leg", "adv_l_leg")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 

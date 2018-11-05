@@ -732,6 +732,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<h2>Citadel Preferences</h2>" //Because fuck me if preferences can't be fucking modularized and expected to update in a reasonable timeframe.
 			dat += "<b>Arousal:</b><a href='?_src_=prefs;preference=arousable'>[arousable == TRUE ? "Enabled" : "Disabled"]</a><BR>"
 			dat += "<b>Exhibitionist:</b><a href='?_src_=prefs;preference=exhibitionist'>[features["exhibitionist"] == TRUE ? "Yes" : "No"]</a><BR>"
+			dat += "<b>Voracious MediHound sleepers:</b> <a href='?_src_=prefs;preference=hound_sleeper'>[(cit_toggles & MEDIHOUND_SLEEPER) ? "Yes" : "No"]</a><br>"
+			dat += "<b>Hear Vore Sounds:</b> <a href='?_src_=prefs;preference=toggleeatingnoise'>[(cit_toggles & EATING_NOISES) ? "Yes" : "No"]</a><br>"
+			dat += "<b>Hear Vore Digestion Sounds:</b> <a href='?_src_=prefs;preference=toggledigestionnoise'>[(cit_toggles & DIGESTION_NOISES) ? "Yes" : "No"]</a><br>"
 			dat += "<b>Widescreen:</b> <a href='?_src_=prefs;preference=widescreenpref'>[widescreenpref ? "Enabled ([CONFIG_GET(string/default_view)])" : "Disabled (15x15)"]</a><br>"
 			dat += "<b>Auto stand:</b> <a href='?_src_=prefs;preference=autostand'>[autostand ? "Enabled" : "Disabled"]</a><br>"
 			dat += "<b>Screen Shake:</b> <a href='?_src_=prefs;preference=screenshake'>[(screenshake==100) ? "Full" : ((screenshake==0) ? "None" : "[screenshake]")]</a><br>"
@@ -1472,7 +1475,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							features["mam_tail"] = "None"
 
 				if("tail_human")
-					var/list/snowflake_tails_list = list("None" = null)
+					var/list/snowflake_tails_list = list()
 					for(var/path in GLOB.tails_list_human)
 						var/datum/sprite_accessory/tails/human/instance = GLOB.tails_list_human[path]
 						if(istype(instance, /datum/sprite_accessory))
@@ -1489,7 +1492,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							features["mam_tail"] = "None"
 
 				if("mam_tail")
-					var/list/snowflake_tails_list = list("None" = null)
+					var/list/snowflake_tails_list = list()
 					for(var/path in GLOB.mam_tails_list)
 						var/datum/sprite_accessory/mam_tails/instance = GLOB.mam_tails_list[path]
 						if(istype(instance, /datum/sprite_accessory))
@@ -1565,7 +1568,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						skin_tone = new_s_tone
 
 				if("taur")
-					var/list/snowflake_taur_list = list("Normal" = null)
+					var/list/snowflake_taur_list = list()
 					for(var/path in GLOB.taur_list)
 						var/datum/sprite_accessory/taur/instance = GLOB.taur_list[path]
 						if(istype(instance, /datum/sprite_accessory))
@@ -1583,7 +1586,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							features["tail_lizard"] = "None"
 
 				if("ears")
-					var/list/snowflake_ears_list = list("Normal" = null)
+					var/list/snowflake_ears_list = list()
 					for(var/path in GLOB.ears_list)
 						var/datum/sprite_accessory/ears/instance = GLOB.ears_list[path]
 						if(istype(instance, /datum/sprite_accessory))
@@ -1596,7 +1599,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						features["ears"] = new_ears
 
 				if("mam_ears")
-					var/list/snowflake_ears_list = list("Normal" = null)
+					var/list/snowflake_ears_list = list()
 					for(var/path in GLOB.mam_ears_list)
 						var/datum/sprite_accessory/mam_ears/instance = GLOB.mam_ears_list[path]
 						if(istype(instance, /datum/sprite_accessory))
@@ -1609,7 +1612,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						features["mam_ears"] = new_ears
 
 				if("mam_body_markings")
-					var/list/snowflake_markings_list = list("Normal" = null)
+					var/list/snowflake_markings_list = list()
 					for(var/path in GLOB.mam_body_markings_list)
 						var/datum/sprite_accessory/mam_body_markings/instance = GLOB.mam_body_markings_list[path]
 						if(istype(instance, /datum/sprite_accessory))
@@ -1925,6 +1928,18 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					parallax = WRAP(parallax - 1, PARALLAX_INSANE, PARALLAX_DISABLE + 1)
 					if (parent && parent.mob && parent.mob.hud_used)
 						parent.mob.hud_used.update_parallax_pref(parent.mob)
+
+				// Citadel edit - Prefs don't work outside of this. :c
+				if("hound_sleeper")
+					cit_toggles ^= MEDIHOUND_SLEEPER
+
+				if("toggleeatingnoise")
+					cit_toggles ^= EATING_NOISES
+
+				if("toggledigestionnoise")
+					cit_toggles ^= DIGESTION_NOISES
+				//END CITADEL EDIT
+
 				if("ambientocclusion")
 					ambientocclusion = !ambientocclusion
 					if(parent && parent.screen && parent.screen.len)
@@ -1943,12 +1958,16 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				if("load")
 					load_preferences()
 					load_character()
+					if(parent && parent.prefs_vr)
+						attempt_vr(parent.prefs_vr,"load_vore","")
 
 				if("changeslot")
 					if(!load_character(text2num(href_list["num"])))
 						random_character()
 						real_name = random_unique_name(gender)
 						save_character()
+					if(parent && parent.prefs_vr)
+						attempt_vr(parent.prefs_vr,"load_vore","")
 
 				if("tab")
 					if (href_list["tab"])
@@ -2043,9 +2062,19 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	else if("xenotail" in pref_species.default_features)
 		character.dna.species.mutant_bodyparts |= "xenotail"
 
-	if(("legs" in pref_species.default_features) && character.dna.features["legs"] == "Digitigrade Legs")
-		pref_species.species_traits += DIGITIGRADE
+	if("legs" in pref_species.default_features)
+		if(character.dna.features["legs"] == "Digitigrade Legs")
+			pref_species.species_traits += DIGITIGRADE
+			character.Digitigrade_Leg_Swap(FALSE)
+
+		if(character.dna.features["legs"] == "Normal Legs" && DIGITIGRADE in pref_species.species_traits)
+			pref_species.species_traits -= DIGITIGRADE
+			character.Digitigrade_Leg_Swap(TRUE)
+
+	else if((!"legs" in pref_species.default_features) && DIGITIGRADE in pref_species.species_traits)
+		pref_species.species_traits -= DIGITIGRADE
 		character.Digitigrade_Leg_Swap(TRUE)
+
 	if(DIGITIGRADE in pref_species.species_traits)
 		character.Digitigrade_Leg_Swap(FALSE)
 
