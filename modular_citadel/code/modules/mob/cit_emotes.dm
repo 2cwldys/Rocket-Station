@@ -52,8 +52,6 @@
 				sound = 'modular_citadel/sound/voice/scream_lizard.ogg'
 			if(is_species(user, /datum/species/skeleton))
 				sound = 'modular_citadel/sound/voice/scream_skeleton.ogg'
-			if (is_species(user, /datum/species/fly) || is_species(user, /datum/species/insect))
-				sound = 'modular_citadel/sound/voice/scream_moth.ogg'
 		if(isalien(user))
 			sound = 'sound/voice/hiss6.ogg'
 		LAZYINITLIST(user.alternate_screams)

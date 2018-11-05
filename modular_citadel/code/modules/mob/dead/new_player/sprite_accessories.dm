@@ -595,6 +595,7 @@
 	icon_state = "neko"
 	hasinner = 1
 	color_src = HAIR
+	icon = 'modular_citadel/icons/mob/mam_ears.dmi'
 
 /datum/sprite_accessory/mam_ears/otie
 	name = "Otusian"
