@@ -32,6 +32,8 @@
 /******************************************
 ************ Human Ears/Tails *************
 *******************************************/
+/datum/sprite_accessory/tails/human/none
+	name = "None"
 
 /datum/sprite_accessory/tails/human/ailurus
 	name = "Red Panda"
@@ -590,7 +592,7 @@
 
 /datum/sprite_accessory/mam_ears/neko
 	name = "Neko"
-	icon_state = "cat"
+	icon_state = "neko"
 	hasinner = 1
 	color_src = HAIR
 
