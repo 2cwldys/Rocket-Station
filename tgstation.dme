@@ -2964,5 +2964,4 @@
 #include "modular_citadel\code\modules\uplink\uplink_items.dm"
 #include "modular_citadel\code\modules\vehicles\secway.dm"
 #include "modular_citadel\interface\skin.dmf"
-#include "modular_robot\code\controllers\subsystem\height.dm"
 // END_INCLUDE
