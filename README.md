@@ -1,15 +1,15 @@
 
-Robot Station <BR>
-Based and maintained from Citadel Station.<BR>
+Rocket Station <BR>
+Based and maintained from Citadel Station, with Changes from LuigiBoi from Robot Station<BR>
 
 [![forthebadge](http://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/pretty-risque.svg)](https://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](http://forthebadge.com)
 
 [![forinfinityandbyond](https://user-images.githubusercontent.com/5211576/29499758-4efff304-85e6-11e7-8267-62919c3688a9.gif)](https://www.reddit.com/r/SS13/comments/5oplxp/what_is_the_main_problem_with_byond_as_an_engine/dclbu1a)
 
-**Robot Station Information** <BR>
-**Ban Appeals:** https://discord.gg/ympbNkq <BR>
-**Code:** https://github.com/LuigiBoi/robot-station-1/ <BR>
-**Discord:**  [Here](https://discord.gg/ympbNkq). <BR>
+**Rocket Station Information** <BR>
+**Ban Appeals:** https://discord.gg/4bXWq7Z <BR>
+**Code:** https://github.com/2cwldys/Rocket-Station/ <BR>
+**Discord:**  [Here](https://discord.gg/4bXWq7Z). <BR>
 
 ## LICENSE
 
