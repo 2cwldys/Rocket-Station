@@ -1,5 +1,9 @@
 <!-- Most valid html will work in here, excluding images. -->
 
-<h1>Welcome to Space Station 13!</h1>
+<h1>Welcome to Rocket Station!</h1>
 
-<i>This server is running a /tg/station 13 Git build.</i>
+<i>This server is running a Robot Station (Citadel, Edited) Git build.</i>
+
+<a href="https://discord.gg/4bXWq7Z">Join our Discord Server!</a>
+
+<b>The server is up 24/7!</b>
