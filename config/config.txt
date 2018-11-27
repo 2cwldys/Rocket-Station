@@ -20,7 +20,7 @@ SERVERNAME Rocket Station
 # SERVERSQLNAME rocketstation
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
-STATIONNAME Rocket Station
+#STATIONNAME Rocket Station
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
 HUB
@@ -226,7 +226,7 @@ CHECK_RANDOMIZER
 SERVER 212.129.2.86:3035
 
 ## forum address
-# FORUMURL http://tgstation13.org/phpBB/index.php
+FORUMURL https://discord.gg/4bXWq7Z
 
 ## Wiki address
 WIKIURL https://discord.gg/4bXWq7Z
