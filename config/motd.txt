@@ -1,9 +1,12 @@
 <!-- Most valid html will work in here, excluding images. -->
 
 <h1>Welcome to Rocket Station!</h1>
-
+<br></br>
+<br></br>
 <i>This server is running a Robot Station (Citadel, Edited) Git build.</i>
-
+<br></br>
+<br></br>
 <a href="https://discord.gg/4bXWq7Z">Join our Discord Server!</a>
-
+<br></br>
+<br></br>
 <b>The server is up 24/7!</b>
