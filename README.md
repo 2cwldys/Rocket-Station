@@ -1,3 +1,4 @@
+![image](https://cdn.discordapp.com/icons/516753377682522127/8ce78b64e0a63a53da2ac5b3a7efa4ee.webp)
 
 Rocket Station <BR>
 Based and maintained from Citadel Station, with Changes by LuigiBoi from Robot Station<BR>
