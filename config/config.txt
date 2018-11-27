@@ -23,7 +23,7 @@ SERVERNAME Rocket Station
 STATIONNAME Rocket Station
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
-#HUB
+HUB
 
 ## Lobby time: This is the amount of time between rounds that players have to setup their characters and be ready.
 LOBBY_COUNTDOWN 120
@@ -223,7 +223,7 @@ CHECK_RANDOMIZER
 
 ## set a server location for world reboot. Don't include the byond://, just give the address and port.
 ## Don't set this to the same server, BYOND will automatically restart players to the server when it has restarted.
-# SERVER ss13.example.com:2506
+SERVER 212.129.2.86:3035
 
 ## forum address
 # FORUMURL http://tgstation13.org/phpBB/index.php
